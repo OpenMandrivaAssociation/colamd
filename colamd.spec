@@ -3,7 +3,7 @@
 %define name		colamd
 %define NAME		COLAMD
 %define version		2.7.1
-%define release		%mkrel 6
+%define release		%mkrel 7
 %define major		%{version}
 %define libname		%mklibname %{name} %{major}
 %define develname	%mklibname %{name} -d
@@ -29,6 +29,7 @@ tends to be sparser than that of A.  The Cholesky factorization of
 Summary:	Library of routines for computing column approximate minimum degree ordering
 Group:		System/Libraries
 Provides:	%{libname} = %{epoch}:%{version}-%{release}
+Obsoletes:	%mklibname %{name} 2
 
 %description -n %{libname}
 The COLAMD column approximate minimum degree ordering algorithm computes
@@ -45,8 +46,8 @@ Group:		Development/C
 Requires:	suitesparse-common-devel >= 3.0.0
 Requires:	%{libname} = %{epoch}:%{version}-%{release}
 Provides:	%{name}-devel = %{epoch}:%{version}-%{release}
-Obsoletes:	%mklibname %name 2 -d
-Obsoletes:	%mklibname %name 2 -d -s
+Obsoletes:	%mklibname %{name} 2 -d
+Obsoletes:	%mklibname %{name} 2 -d -s
 
 %description -n %{develname}
 The COLAMD column approximate minimum degree ordering algorithm computes
