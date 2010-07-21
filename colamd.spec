@@ -2,8 +2,8 @@
 
 %define name		colamd
 %define NAME		COLAMD
-%define version		2.7.1
-%define release		%mkrel 10
+%define version		2.7.2
+%define release		%mkrel 1
 %define major		%{version}
 %define libname		%mklibname %{name} %{major}
 %define develname	%mklibname %{name} -d
