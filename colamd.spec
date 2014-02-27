@@ -1,11 +1,11 @@
 %define NAME	COLAMD
-%define major	%{version}
+%define major	2
 %define libname	%mklibname %{name} %{major}
 %define devname	%mklibname %{name} -d
 
 Name:		colamd
 Version:	2.8.0
-Release:	2
+Release:	3
 Epoch:		1
 Summary:	Routines for computing column approximate minimum degree ordering
 Group:		System/Libraries
@@ -23,6 +23,8 @@ tends to be sparser than that of A.  The Cholesky factorization of
 %package -n %{libname}
 Summary:	Library of routines for computing column approximate minimum degree ordering
 Group:		System/Libraries
+%define	oldname	%{mklibname %{name} 2.8.0}
+%rename		%{oldname}
 
 %description -n %{libname}
 The COLAMD column approximate minimum degree ordering algorithm computes
