@@ -5,7 +5,7 @@
 
 Name:		colamd
 Version:	2.8.0
-Release:	3
+Release:	4
 Epoch:		1
 Summary:	Routines for computing column approximate minimum degree ordering
 Group:		System/Libraries
